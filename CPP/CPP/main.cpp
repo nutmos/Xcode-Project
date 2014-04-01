@@ -7,32 +7,14 @@
 //
 
 #include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <stack>
+
 using namespace std;
 
 int main() {
-    int n;
-    scanf("%d",&n);
-    char **str = new char*[n];
-    for (int i = 0; i < n; ++i) {
-        char *sub_str = new char[101];
-        str[i] = sub_str;
-        scanf("%s",sub_str);
-    }
-    for (int i = n-1; i >= 0; --i) {
-        for (int j = 0; j < i; ++j) {
-            //printf("%s cmp %s", str[j], str[j+1]);
-            int cmp = strcmp(str[j], str[j+1]);
-            if (cmp > 0) {
-                char *tmp = str[j];
-                str[j] = str[j+1];
-                str[j+1] = tmp;
-            }
-        }
-    }
-    for (int i = 0; i < n; ++i) {
-        printf("%s\n", str[i]);
-    }
+    stack<int> stk;
+    stk.push(5);
+    cout << stk.top() << endl;
+    stk.pop();
+    cout << stk.empty();
 }
