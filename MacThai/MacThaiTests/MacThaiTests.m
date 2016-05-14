@@ -2,8 +2,8 @@
 //  MacThaiTests.m
 //  MacThaiTests
 //
-//  Created by Nattapong Mos on 14/3/57.
-//  Copyright (c) พ.ศ. 2557 Nattapong Mos. All rights reserved.
+//  Created by Nattapong Mos on 22/8/57.
+//  Copyright (c) พ.ศ. 2557 Nutmos. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

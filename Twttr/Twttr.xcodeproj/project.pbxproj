@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C468EA1941787C002C21D9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C468E91941787C002C21D9 /* Cocoa.framework */; };
+		01C468F41941787C002C21D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01C468F21941787C002C21D9 /* InfoPlist.strings */; };
+		01C468F61941787C002C21D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C468F51941787C002C21D9 /* main.m */; };
+		01C468FA1941787C002C21D9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 01C468F81941787C002C21D9 /* Credits.rtf */; };
+		01C468FD1941787C002C21D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C468FC1941787C002C21D9 /* AppDelegate.m */; };
+		01C469001941787C002C21D9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C468FE1941787C002C21D9 /* MainMenu.xib */; };
+		01C469021941787C002C21D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C469011941787C002C21D9 /* Images.xcassets */; };
+		01C469091941787C002C21D9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C469081941787C002C21D9 /* XCTest.framework */; };
+		01C4690A1941787C002C21D9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C468E91941787C002C21D9 /* Cocoa.framework */; };
+		01C469121941787C002C21D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01C469101941787C002C21D9 /* InfoPlist.strings */; };
+		01C469141941787C002C21D9 /* TwttrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C469131941787C002C21D9 /* TwttrTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01C4690B1941787C002C21D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C468DE1941787C002C21D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01C468E51941787C002C21D9;
+			remoteInfo = Twttr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C468E61941787C002C21D9 /* Twttr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twttr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C468E91941787C002C21D9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		01C468EC1941787C002C21D9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		01C468ED1941787C002C21D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		01C468EE1941787C002C21D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01C468F11941787C002C21D9 /* Twttr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Twttr-Info.plist"; sourceTree = "<group>"; };
+		01C468F31941787C002C21D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01C468F51941787C002C21D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01C468F71941787C002C21D9 /* Twttr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twttr-Prefix.pch"; sourceTree = "<group>"; };
+		01C468F91941787C002C21D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		01C468FB1941787C002C21D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01C468FC1941787C002C21D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01C468FF1941787C002C21D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		01C469011941787C002C21D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01C469071941787C002C21D9 /* TwttrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwttrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C469081941787C002C21D9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		01C4690F1941787C002C21D9 /* TwttrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwttrTests-Info.plist"; sourceTree = "<group>"; };
+		01C469111941787C002C21D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01C469131941787C002C21D9 /* TwttrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwttrTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01C468E31941787C002C21D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C468EA1941787C002C21D9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C469041941787C002C21D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C4690A1941787C002C21D9 /* Cocoa.framework in Frameworks */,
+				01C469091941787C002C21D9 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01C468DD1941787C002C21D9 = {
+			isa = PBXGroup;
+			children = (
+				01C468EF1941787C002C21D9 /* Twttr */,
+				01C4690D1941787C002C21D9 /* TwttrTests */,
+				01C468E81941787C002C21D9 /* Frameworks */,
+				01C468E71941787C002C21D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01C468E71941787C002C21D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01C468E61941787C002C21D9 /* Twttr.app */,
+				01C469071941787C002C21D9 /* TwttrTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01C468E81941787C002C21D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C468E91941787C002C21D9 /* Cocoa.framework */,
+				01C469081941787C002C21D9 /* XCTest.framework */,
+				01C468EB1941787C002C21D9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01C468EB1941787C002C21D9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C468EC1941787C002C21D9 /* AppKit.framework */,
+				01C468ED1941787C002C21D9 /* CoreData.framework */,
+				01C468EE1941787C002C21D9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		01C468EF1941787C002C21D9 /* Twttr */ = {
+			isa = PBXGroup;
+			children = (
+				01C468FB1941787C002C21D9 /* AppDelegate.h */,
+				01C468FC1941787C002C21D9 /* AppDelegate.m */,
+				01C468FE1941787C002C21D9 /* MainMenu.xib */,
+				01C469011941787C002C21D9 /* Images.xcassets */,
+				01C468F01941787C002C21D9 /* Supporting Files */,
+			);
+			path = Twttr;
+			sourceTree = "<group>";
+		};
+		01C468F01941787C002C21D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01C468F11941787C002C21D9 /* Twttr-Info.plist */,
+				01C468F21941787C002C21D9 /* InfoPlist.strings */,
+				01C468F51941787C002C21D9 /* main.m */,
+				01C468F71941787C002C21D9 /* Twttr-Prefix.pch */,
+				01C468F81941787C002C21D9 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01C4690D1941787C002C21D9 /* TwttrTests */ = {
+			isa = PBXGroup;
+			children = (
+				01C469131941787C002C21D9 /* TwttrTests.m */,
+				01C4690E1941787C002C21D9 /* Supporting Files */,
+			);
+			path = TwttrTests;
+			sourceTree = "<group>";
+		};
+		01C4690E1941787C002C21D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01C4690F1941787C002C21D9 /* TwttrTests-Info.plist */,
+				01C469101941787C002C21D9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01C468E51941787C002C21D9 /* Twttr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C469171941787C002C21D9 /* Build configuration list for PBXNativeTarget "Twttr" */;
+			buildPhases = (
+				01C468E21941787C002C21D9 /* Sources */,
+				01C468E31941787C002C21D9 /* Frameworks */,
+				01C468E41941787C002C21D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twttr;
+			productName = Twttr;
+			productReference = 01C468E61941787C002C21D9 /* Twttr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01C469061941787C002C21D9 /* TwttrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C4691A1941787C002C21D9 /* Build configuration list for PBXNativeTarget "TwttrTests" */;
+			buildPhases = (
+				01C469031941787C002C21D9 /* Sources */,
+				01C469041941787C002C21D9 /* Frameworks */,
+				01C469051941787C002C21D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01C4690C1941787C002C21D9 /* PBXTargetDependency */,
+			);
+			name = TwttrTests;
+			productName = TwttrTests;
+			productReference = 01C469071941787C002C21D9 /* TwttrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01C468DE1941787C002C21D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Nutmos;
+				TargetAttributes = {
+					01C469061941787C002C21D9 = {
+						TestTargetID = 01C468E51941787C002C21D9;
+					};
+				};
+			};
+			buildConfigurationList = 01C468E11941787C002C21D9 /* Build configuration list for PBXProject "Twttr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01C468DD1941787C002C21D9;
+			productRefGroup = 01C468E71941787C002C21D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01C468E51941787C002C21D9 /* Twttr */,
+				01C469061941787C002C21D9 /* TwttrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01C468E41941787C002C21D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C468F41941787C002C21D9 /* InfoPlist.strings in Resources */,
+				01C469021941787C002C21D9 /* Images.xcassets in Resources */,
+				01C468FA1941787C002C21D9 /* Credits.rtf in Resources */,
+				01C469001941787C002C21D9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C469051941787C002C21D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C469121941787C002C21D9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01C468E21941787C002C21D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C468FD1941787C002C21D9 /* AppDelegate.m in Sources */,
+				01C468F61941787C002C21D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C469031941787C002C21D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C469141941787C002C21D9 /* TwttrTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01C4690C1941787C002C21D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01C468E51941787C002C21D9 /* Twttr */;
+			targetProxy = 01C4690B1941787C002C21D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01C468F21941787C002C21D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C468F31941787C002C21D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01C468F81941787C002C21D9 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C468F91941787C002C21D9 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		01C468FE1941787C002C21D9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C468FF1941787C002C21D9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		01C469101941787C002C21D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C469111941787C002C21D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01C469151941787C002C21D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		01C469161941787C002C21D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		01C469181941787C002C21D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twttr/Twttr-Prefix.pch";
+				INFOPLIST_FILE = "Twttr/Twttr-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01C469191941787C002C21D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twttr/Twttr-Prefix.pch";
+				INFOPLIST_FILE = "Twttr/Twttr-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		01C4691B1941787C002C21D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twttr.app/Contents/MacOS/Twttr";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twttr/Twttr-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TwttrTests/TwttrTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		01C4691C1941787C002C21D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twttr.app/Contents/MacOS/Twttr";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twttr/Twttr-Prefix.pch";
+				INFOPLIST_FILE = "TwttrTests/TwttrTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01C468E11941787C002C21D9 /* Build configuration list for PBXProject "Twttr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C469151941787C002C21D9 /* Debug */,
+				01C469161941787C002C21D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C469171941787C002C21D9 /* Build configuration list for PBXNativeTarget "Twttr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C469181941787C002C21D9 /* Debug */,
+				01C469191941787C002C21D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01C4691A1941787C002C21D9 /* Build configuration list for PBXNativeTarget "TwttrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C4691B1941787C002C21D9 /* Debug */,
+				01C4691C1941787C002C21D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01C468DE1941787C002C21D9 /* Project object */;
+}
