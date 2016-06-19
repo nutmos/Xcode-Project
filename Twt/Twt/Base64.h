@@ -1,13 +1,18 @@
 //
 //  Base64.h
-//  Twt
-//
-//  Created by Nattapong Mos on 25/6/57.
-//  Copyright (c) พ.ศ. 2557 Nattapong Mos. All rights reserved.
-//
+//  CryptTest
+//  Created by SURAJ K THOMAS  on 02/05/2013.
+
 
 #import <Foundation/Foundation.h>
 
-@interface Base64 : NSObject
 
+@interface Base64 : NSObject {
+    
+}
++ (void) initialize;
++ (NSString*) encode:(const uint8_t*) input length:(NSInteger) length;
++ (NSString*) encode:(NSData*) rawBytes;
++ (NSData*) decode:(const char*) string length:(NSInteger) inputLength;
++ (NSData*) decode:(NSString*) string;
 @end

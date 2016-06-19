@@ -8,16 +8,13 @@
 
 import UIKit
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: UITableViewController, XMLParserDelegate {
+
+    private var categories = ["News": "news", "Featured Review": "featured-review", "Apple": "news/apple", "iPhone": "news/iphone", "iPad": "news/ipad", "iPod": "news/ipod-news", "iOS": "news/ios-news", "OS X": "news/os-x-news", "iCloud": "news/icloud-news", "Apple Watch": "news/apple-watch", "Apple TV": "news/apple-tv-news", "Beats": "news/beats-news", "Steve Jobs": "news/steve-jobs-2"]
+    private var categoriesKey = ["News", "Featured Review", "Apple", "iPhone", "iPad", "iPod", "iOS", "OS X", "iCloud", "Apple Watch", "Apple TV", "Beats", "Steve Jobs"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,27 +24,15 @@ class CategoryViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.categories.count
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryID", for: indexPath) as UITableViewCell
+        cell.textLabel?.text = self.categoriesKey[(indexPath as NSIndexPath).row]
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -83,15 +68,70 @@ class CategoryViewController: UITableViewController {
         return true
     }
     */
+    
+    // MARK: - Table view delegate
 
-    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let text = tableView.cellForRow(at: indexPath)?.textLabel?.text {
+            if let cat = self.categories[text] {
+                performSegue(withIdentifier: "ToSubFeed", sender: cat)
+            }
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        let segueID = segue.identifier
+        if segueID == "ToSubFeed" {
+            let vc = segue.destinationViewController as! SubFeedViewController
+            if let subString = sender as? String {
+                if let url = URL(string: "http://www.macthai.com/category/\(subString)/feed") {
+                    vc.url = url
+                }
+            }
+        }
     }
-    */
+    
 
+    // MARK: - XML Parser Delegate
+/*
+    func parserDidStartDocument(parser: NSXMLParser) {
+        println("parser start")
+    }
+
+    func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
+        println("error occured")
+        println("\(parseError.localizedDescription)")
+    }
+
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+        println("didStartElement = \(elementName)")
+        self.elementName = elementName
+        if elementName == "option" {
+            self.catName = ""
+            self.catValue = attributeDict["value"] as? String
+        }
+    }
+
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+        if self.elementName == "option" {
+            if let string = string {
+                self.catName? += string
+            }
+        }
+    }
+
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if self.elementName == "option" {
+            if let value = self.catValue, name = self.catName {
+                self.categories.append([name: value])
+                //println(self.categories)
+            }
+        }
+    }
+*/
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "019FFC4318D3441500BC0FE3"
+               BlueprintIdentifier = "011C94CF19A74EDB005F08AD"
                BuildableName = "MacThai.app"
                BlueprintName = "MacThai"
                ReferencedContainer = "container:MacThai.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "019FFC6718D3441600BC0FE3"
+               BlueprintIdentifier = "011C94F319A74EDB005F08AD"
                BuildableName = "MacThaiTests.xctest"
                BlueprintName = "MacThaiTests"
                ReferencedContainer = "container:MacThai.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "019FFC4318D3441500BC0FE3"
+            BlueprintIdentifier = "011C94CF19A74EDB005F08AD"
             BuildableName = "MacThai.app"
             BlueprintName = "MacThai"
             ReferencedContainer = "container:MacThai.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "019FFC4318D3441500BC0FE3"
+            BlueprintIdentifier = "011C94CF19A74EDB005F08AD"
             BuildableName = "MacThai.app"
             BlueprintName = "MacThai"
             ReferencedContainer = "container:MacThai.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "019FFC4318D3441500BC0FE3"
+            BlueprintIdentifier = "011C94CF19A74EDB005F08AD"
             BuildableName = "MacThai.app"
             BlueprintName = "MacThai"
             ReferencedContainer = "container:MacThai.xcodeproj">

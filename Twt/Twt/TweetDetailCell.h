@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CountCell : UITableViewCell
+@interface TweetDetailCell : UITableViewCell <UIGestureRecognizerDelegate>
+
+- (void)setTweetDictionary:(NSDictionary *)tweetDictionary inTableViewController:(UITableViewController *)vc;
 
 @end

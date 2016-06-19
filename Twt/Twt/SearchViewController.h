@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UITableViewController
+typedef NS_ENUM(NSInteger, RowSelected) {
+    RowGoToUserSelected = 0,
+    RowSearchTweetsSelected,
+    RowSearchUsersSelected
+};
+
+typedef NS_ENUM(NSInteger, UseType) {
+    UseSavedSearch,
+    UseTypingText
+};
+
+@interface SearchViewController : UITableViewController <UISearchBarDelegate, UIScrollViewDelegate>
 
 @end

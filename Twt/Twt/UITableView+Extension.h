@@ -10,4 +10,6 @@
 
 @interface UITableView (Extension)
 
+- (void)scrollToIndexPath:(NSIndexPath *)indexPath;
+
 @end

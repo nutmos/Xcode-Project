@@ -12,20 +12,24 @@
 	<dict>
 		<key>65B88FC3-6996-4605-89E1-D826A227C270</key>
 		<string>https://github.com/nutmos/Xcode-Project.git</string>
+		<key>97056EBBF883770620989CD30609C8FB2666348A</key>
+		<string>https://github.com/nutmos/Xcode-Project.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Twt/Twt.xcodeproj/project.xcworkspace</string>
+	<string>Twt/Twt.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>65B88FC3-6996-4605-89E1-D826A227C270</key>
+		<string>../../../../Xcode Project</string>
+		<key>97056EBBF883770620989CD30609C8FB2666348A</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/nutmos/Xcode-Project.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>65B88FC3-6996-4605-89E1-D826A227C270</string>
+	<string>97056EBBF883770620989CD30609C8FB2666348A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>65B88FC3-6996-4605-89E1-D826A227C270</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Xcode Project</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>97056EBBF883770620989CD30609C8FB2666348A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Xcode%20Project</string>
 		</dict>
 	</array>
 </dict>

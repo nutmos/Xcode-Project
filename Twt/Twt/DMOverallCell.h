@@ -10,4 +10,8 @@
 
 @interface DMOverallCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *avatar;
+@property (strong ,nonatomic) IBOutlet UILabel *DMWithUser;
+@property (strong, nonatomic) IBOutlet UILabel *lastestText;
+
 @end

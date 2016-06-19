@@ -7,14 +7,18 @@
 //
 
 #import "FirstTabBarController.h"
+#import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface FirstTabBarController ()
+
+@property AppDelegate *appDelegate;
 
 @end
 
 @implementation FirstTabBarController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -25,6 +29,11 @@
 
 - (void)viewDidLoad
 {
+    self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    int index = 0;
+    for (UITabBarItem *item in self.tabBar.items) {
+        item.tag = index++;
+    }
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -33,6 +42,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    self.appDelegate.selectedTabBarItemIndex = item.tag;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if (viewController == tabBarController.moreNavigationController) {
+        tabBarController.moreNavigationController.delegate = self;
+    }
 }
 
 /*

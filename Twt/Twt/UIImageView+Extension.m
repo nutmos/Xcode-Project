@@ -10,4 +10,11 @@
 
 @implementation UIImageView (Extension)
 
+- (void)maskToCircleWithAvatarSide:(NSInteger)avatarSide {
+    self.layer.cornerRadius = avatarSide/2.0;
+    self.layer.borderWidth = 0.0f;
+    self.layer.masksToBounds = NO;
+    self.clipsToBounds = YES;
+}
+
 @end

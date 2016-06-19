@@ -14,14 +14,14 @@
 		011C94E019A74EDB005F08AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C94DF19A74EDB005F08AD /* main.m */; };
 		011C94E419A74EDB005F08AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C94E319A74EDB005F08AD /* AppDelegate.m */; };
 		011C94E719A74EDB005F08AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011C94E519A74EDB005F08AD /* Main.storyboard */; };
-		011C94EA19A74EDB005F08AD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C94E919A74EDB005F08AD /* FirstViewController.m */; };
-		011C94ED19A74EDB005F08AD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C94EC19A74EDB005F08AD /* SecondViewController.m */; };
 		011C94EF19A74EDB005F08AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011C94EE19A74EDB005F08AD /* Images.xcassets */; };
 		011C94F619A74EDB005F08AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C94F519A74EDB005F08AD /* XCTest.framework */; };
 		011C94F719A74EDB005F08AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C94D319A74EDB005F08AD /* Foundation.framework */; };
 		011C94F819A74EDB005F08AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C94D719A74EDB005F08AD /* UIKit.framework */; };
 		011C950019A74EDB005F08AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 011C94FE19A74EDB005F08AD /* InfoPlist.strings */; };
 		011C950219A74EDB005F08AD /* MacThaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C950119A74EDB005F08AD /* MacThaiTests.m */; };
+		01DF11B119AC464F00E48787 /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DF11B019AC464F00E48787 /* ArticleCell.m */; };
+		01DFE87219A79782007470D7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE87119A79782007470D7 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +46,16 @@
 		011C94E219A74EDB005F08AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		011C94E319A74EDB005F08AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		011C94E619A74EDB005F08AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		011C94E819A74EDB005F08AD /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		011C94E919A74EDB005F08AD /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		011C94EB19A74EDB005F08AD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		011C94EC19A74EDB005F08AD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		011C94EE19A74EDB005F08AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		011C94F419A74EDB005F08AD /* MacThaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacThaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		011C94F519A74EDB005F08AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		011C94FD19A74EDB005F08AD /* MacThaiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacThaiTests-Info.plist"; sourceTree = "<group>"; };
 		011C94FF19A74EDB005F08AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		011C950119A74EDB005F08AD /* MacThaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacThaiTests.m; sourceTree = "<group>"; };
+		01DF11AF19AC464F00E48787 /* ArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleCell.h; sourceTree = "<group>"; };
+		01DF11B019AC464F00E48787 /* ArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleCell.m; sourceTree = "<group>"; };
+		01DFE87019A79782007470D7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		01DFE87119A79782007470D7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +118,9 @@
 				011C94E219A74EDB005F08AD /* AppDelegate.h */,
 				011C94E319A74EDB005F08AD /* AppDelegate.m */,
 				011C94E519A74EDB005F08AD /* Main.storyboard */,
-				011C94E819A74EDB005F08AD /* FirstViewController.h */,
-				011C94E919A74EDB005F08AD /* FirstViewController.m */,
-				011C94EB19A74EDB005F08AD /* SecondViewController.h */,
-				011C94EC19A74EDB005F08AD /* SecondViewController.m */,
+				01DFE87019A79782007470D7 /* HomeViewController.h */,
+				01DFE87119A79782007470D7 /* HomeViewController.m */,
+				011C950E19A7567F005F08AD /* Cell */,
 				011C94EE19A74EDB005F08AD /* Images.xcassets */,
 				011C94DA19A74EDB005F08AD /* Supporting Files */,
 			);
@@ -155,6 +154,15 @@
 				011C94FE19A74EDB005F08AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		011C950E19A7567F005F08AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01DF11AF19AC464F00E48787 /* ArticleCell.h */,
+				01DF11B019AC464F00E48787 /* ArticleCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011C94ED19A74EDB005F08AD /* SecondViewController.m in Sources */,
+				01DF11B119AC464F00E48787 /* ArticleCell.m in Sources */,
 				011C94E419A74EDB005F08AD /* AppDelegate.m in Sources */,
-				011C94EA19A74EDB005F08AD /* FirstViewController.m in Sources */,
 				011C94E019A74EDB005F08AD /* main.m in Sources */,
+				01DFE87219A79782007470D7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +470,7 @@
 				011C950719A74EDB005F08AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		011C950819A74EDB005F08AD /* Build configuration list for PBXNativeTarget "MacThaiTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +479,7 @@
 				011C950A19A74EDB005F08AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

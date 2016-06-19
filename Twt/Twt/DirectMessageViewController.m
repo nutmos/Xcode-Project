@@ -7,6 +7,7 @@
 //
 
 #import "DirectMessageViewController.h"
+#import "UIViewController+RequiredObject.h"
 
 @interface DirectMessageViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation DirectMessageViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (instancetype)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {

@@ -10,4 +10,8 @@
 
 @implementation UITableView (Extension)
 
+- (void)scrollToIndexPath:(NSIndexPath *)indexPath {
+    [self scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+}
+
 @end

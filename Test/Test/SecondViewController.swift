@@ -1,8 +1,8 @@
 //
 //  SecondViewController.swift
-//  Test
+//  test
 //
-//  Created by Nattapong Mos on 25/10/57.
+//  Created by Nattapong Mos on 2/11/57.
 //  Copyright (c) พ.ศ. 2557 Nattapong Mos. All rights reserved.
 //
 

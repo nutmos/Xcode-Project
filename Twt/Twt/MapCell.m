@@ -7,10 +7,17 @@
 //
 
 #import "MapCell.h"
+#import <MapKit/MapKit.h>
+
+@interface MapCell ()
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
+@end
 
 @implementation MapCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6FA871C7-EC13-4CAC-BB70-3868AA816EC1</string>
+	<string>4E187CBD-6C59-4B7E-B38F-F27798B58C63</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MacThai</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>520FA862-4B05-4940-A88C-2C9C113D2E36</key>
+		<key>97056EBBF883770620989CD30609C8FB2666348A</key>
 		<string>https://github.com/nutmos/Xcode-Project.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MacThai/MacThai.xcodeproj/project.xcworkspace</string>
+	<string>MacThai/MacThai.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>520FA862-4B05-4940-A88C-2C9C113D2E36</key>
+		<key>97056EBBF883770620989CD30609C8FB2666348A</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/nutmos/Xcode-Project.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>520FA862-4B05-4940-A88C-2C9C113D2E36</string>
+	<string>97056EBBF883770620989CD30609C8FB2666348A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>520FA862-4B05-4940-A88C-2C9C113D2E36</string>
+			<string>97056EBBF883770620989CD30609C8FB2666348A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Xcode Project</string>
+			<string>Xcode%20Project</string>
 		</dict>
 	</array>
 </dict>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "97056EBBF883770620989CD30609C8FB2666348A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "97056EBBF883770620989CD30609C8FB2666348A" : 0,
+    "65B88FC3-6996-4605-89E1-D826A227C270" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DC76BDC7-BDC9-4C3C-A395-140131043413",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "97056EBBF883770620989CD30609C8FB2666348A" : "Xcode%20Project",
+    "65B88FC3-6996-4605-89E1-D826A227C270" : "Xcode Project"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Twt",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Twt\/Twt.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nutmos\/Xcode-Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65B88FC3-6996-4605-89E1-D826A227C270"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nutmos\/Xcode-Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "97056EBBF883770620989CD30609C8FB2666348A"
+    }
+  ]
+}

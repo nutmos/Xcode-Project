@@ -10,4 +10,7 @@
 
 @interface ArticleCell : UITableViewCell
 
+- (void)setArticleWithDictionary:(NSDictionary *)data;
++ (CGFloat)calculateCellHeightWithArticleDictionary:(NSDictionary *)data;
+
 @end

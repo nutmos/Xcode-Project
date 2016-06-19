@@ -10,14 +10,24 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
 
+    @IBOutlet private weak var readabilitySwitch: UISwitch!
+    private var userDefault = UserDefaults()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        /*if let readabilityOn = getReadabilitySetting()?["readability"] as? Bool {
+            //println("readabilityOn = \(readabilityOn)")
+            self.readabilitySwitch.on = readabilityOn
+        }*/
+        if let readabilityOn = self.userDefault.object(forKey: "readability") as? Bool {
+            print("readability = \(readabilityOn)")
+            self.readabilitySwitch.isOn = readabilityOn
+        }
+        else {
+            print("no readability")
+            self.userDefault.set(false, forKey: "readability")
+            self.readabilitySwitch.isOn = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,18 +36,6 @@ class SettingsViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -83,15 +81,30 @@ class SettingsViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.textLabel?.text == "About" {
+            tableView.deselectRow(at: indexPath, animated: true)
+            performSegue(withIdentifier: "ToAbout", sender: nil)
+        }
+        else if cell?.textLabel?.text == "Notifications" {
+            performSegue(withIdentifier: "ToNotifications", sender: nil)
+        }
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        //var identifier = segue.identifier
     }
-    */
+    
+    // MARK: - User Interactions
+
+    @IBAction internal func didReadabilitySwitchChanged(_ sender: UISwitch) {
+        //setReadabilitySetting(["readability": sender.on])
+        self.userDefault.set(sender.isOn, forKey: "readability")
+    }
 
 }

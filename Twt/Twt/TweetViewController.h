@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetCell.h"
+@class TweetViewController;
 
-@interface TweetViewController : UITableViewController
+@protocol TweetViewControllerDelegate <NSObject>
+
+@optional
+- (void)tweetViewController:(TweetViewController *)vc tweetData:(NSDictionary *)tweet;
+- (void)tweetViewController:(TweetViewController *)vc removeTweetData:(NSDictionary *)tweet;
+
+@end
+
+@interface TweetViewController : UITableViewController <UIActionSheetDelegate, UIGestureRecognizerDelegate, TweetCellDelegate, TweetViewControllerDelegate>
+
+@property (strong, nonatomic) NSDictionary *tweetDictionary;
+@property (assign, nonatomic) id<TweetViewControllerDelegate> delegate;
 
 @end

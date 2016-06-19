@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserDetailCell.h"
 
-@interface UserViewController : UITableViewController
+@interface UserViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UserDetailCellDelegate>
+
+@property (nonatomic, strong) NSString *screenName;
+@property (nonatomic, strong) UIImage *avatarImage;
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
 @end

@@ -1,15 +1,15 @@
 //
-//  TestTests.swift
-//  TestTests
+//  testTests.swift
+//  testTests
 //
-//  Created by Nattapong Mos on 25/10/57.
+//  Created by Nattapong Mos on 2/11/57.
 //  Copyright (c) พ.ศ. 2557 Nattapong Mos. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class TestTests: XCTestCase {
+class testTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

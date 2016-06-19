@@ -10,13 +10,19 @@
 
 @interface ChangePasswordViewController ()
 
+@property (strong, nonatomic) IBOutlet UITextField *passOldField;
+@property (strong, nonatomic) IBOutlet UITextField *passNewField;
+@property (strong, nonatomic) IBOutlet UITextField *confirmField;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *confirmButton;
+
 @end
 
 @implementation ChangePasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.tableView.allowsSelection = NO;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -32,22 +38,16 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 6;
 }
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    return cell;
 }
 */
 
@@ -94,5 +94,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - User Interaction
+
+- (IBAction)didComfirmButtonPressed:(id)sender {
+    NSLog(@"buzzer btn pressed");
+    NSURL *url = [NSURL URLWithString:@"http://onestone.eng.src.ku.ac.th/~b5530300049/exceed12/edite.php"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSString *postData = [NSString stringWithFormat:@"pwd=%@&n-pwd=%@&re-n-pwd=%@", self.passOldField.text, self.passNewField.text, self.confirmField.text];
+    NSLog(@"postData = %@", postData);
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [postData dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    NSLog(@"data = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                    
+                }] resume];
+}
 
 @end

@@ -54,7 +54,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
     UIToolbar *_nativeBlurView;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -194,7 +194,7 @@ NSUInteger UIEDeviceSystemMajorVersion()
     static NSUInteger __osVersion = -1;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        __osVersion = [[[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] objectAtIndex:0] intValue];
+        __osVersion = [[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."][0] intValue];
     });
     return __osVersion;
 }

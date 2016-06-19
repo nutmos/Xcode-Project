@@ -10,4 +10,6 @@
 
 @interface UIImageView (Extension)
 
+- (void)maskToCircleWithAvatarSide:(NSInteger)avatarSide;
+
 @end

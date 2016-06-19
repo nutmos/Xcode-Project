@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstTabBarController : UITabBarController
+@interface FirstTabBarController : UITabBarController <UITabBarDelegate, UINavigationControllerDelegate>
 
 @end
