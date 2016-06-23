@@ -123,7 +123,7 @@ class BrowserViewController: UIViewController, UIWebViewDelegate, WKNavigationDe
     }
 
     internal func webViewDidFinishLoad(_ webView: UIWebView) {
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: "enableButton", userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(("enableButton")), userInfo: nil, repeats: false)
         //self.activityIndicator.stopAnimating()
         UIApplication.shared().isNetworkActivityIndicatorVisible = false
         self.title = webView.stringByEvaluatingJavaScript(from: "document.title")

@@ -30,7 +30,7 @@ class SubFeedViewController: UITableViewController, XMLParserDelegate {
     private var itemImageLink: URL?
     private var foundTitle = false
     private var activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-    private var imageCache = Cache()
+    private var imageCache = Cache<AnyObject, AnyObject>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class SubFeedViewController: UITableViewController, XMLParserDelegate {
         self.activityIndicator.startAnimating()
         let refresh = UIRefreshControl()
         refresh.tintColor = UIColor.gray()
-        refresh.addTarget(self, action: "refreshTable:", for: .valueChanged)
+        refresh.addTarget(self, action: #selector(SubFeedViewController.refreshTable(_:)), for: .valueChanged)
         self.refreshControl = refresh
         
         /*if tableView.respondsToSelector("layoutMargins") {
@@ -301,14 +301,15 @@ class SubFeedViewController: UITableViewController, XMLParserDelegate {
                     let end = self.itemDescription?.index((self.itemDescription?.startIndex)!, offsetBy: descriptionLength)
                     self.itemDescription = (self.itemDescription?.substring(with: (start! ..< end!)))! + "..."
                 }
-                self.itemDescription = self.itemDescription?.stringByRemovingPercentEncoding
+                self.itemDescription = self.itemDescription?.removingPercentEncoding
                 self.items = [String: AnyObject]()
                 if var itms = self.items {
                     if let link = self.itemLink {
-                        itms["link"] = link.replacingOccurrences(of: "\n\t\t", with: "", options: .regularExpressionSearch, range: (link.characters.indices))
+                        itms["link"] = link.replacingOccurrences(of: "\n\t\t", with: "", options: .regularExpressionSearch, range: link.range(of: link))
                     }
                     if let title = self.itemTitle {
-                        itms["title"] = title.replacingOccurrences(of: "\n\t\t", with: "", options: .regularExpressionSearch, range: (title.characters.indices))
+                        //itms["title"] = title.replacingOccurrences(of: "\n\t\t", with: "", options: .regularExpressionSearch, range: (title.characters.indices))
+                        itms["title"] = title.replacingOccurrences(of: "\n\t\t", with: "", options: .regularExpressionSearch, range: title.range(of: title))
                     }
                     if let description = self.itemDescription {
                         itms["description"] = description
@@ -403,23 +404,28 @@ class SubFeedViewController: UITableViewController, XMLParserDelegate {
         self.activityIndicator.startAnimating()
         
         let time = DispatchTime.now() + Double(0) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.after(when: time, block: {
+        DispatchQueue.main.after(when: time) { 
             task.resume()
-        })
+        }
     }
     
     private func handleResponse(_ error: NSError!) {
-        if let path = URL(string: try! self.url!.appendingPathComponent("?paged=\(++self.page)").absoluteString.stringByRemovingPercentEncoding!) {
-            if let data = try? Data(contentsOf: path) {
-                networkActivity(true)
-                self.parser = XMLParser(data: data)
-                networkActivity(false)
-                self.parser?.delegate = self
-                self.parser?.shouldResolveExternalEntities = false
-                self.parser?.parse()
-                tableView.reloadData()
-                print(feeds)
+        self.page += 1
+        do {
+            if let path = try URL(string: (self.url?.appendingPathComponent("?paged=\(self.page)").absoluteString?.removingPercentEncoding)!) {
+                if let data = try? Data(contentsOf: path) {
+                    networkActivity(true)
+                    self.parser = XMLParser(data: data)
+                    networkActivity(false)
+                    self.parser?.delegate = self
+                    self.parser?.shouldResolveExternalEntities = false
+                    self.parser?.parse()
+                    tableView.reloadData()
+                    print(feeds)
+                }
             }
+        } catch {
+            
         }
     }
 

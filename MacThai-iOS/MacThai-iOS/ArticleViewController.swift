@@ -21,12 +21,12 @@ class ArticleViewController: UIViewController, XMLParserDelegate {
         if let link = self.articleLink {
             //var contentStr = (NSString(contentsOfURL: link, encoding: NSUTF8StringEncoding, error: nil)!).stringByReplacingOccurrencesOfString("<!DOCTYPE html>", withString: "")
             //var contentStr = NSString(contentsOfURL: link, encoding: NSUTF8StringEncoding, error: nil)
-            var contentStr = ""
-            do {
+            let contentStr = String(contentsOfURL: link, encoding:  String.Encoding.utf8).replacingOccurrences(of: "<!DOCTYPE html>", with: "")
+            /*do {
                 try contentStr = String(contentsOfURL: link, encoding:  String.Encoding.utf8).replacingOccurrences(of: "<!DOCTYPE html>", with: "")
             } catch {
                 print("error")
-            }
+            }*/
             let cnt = "<content>\(contentStr)</content>"
             //println(cnt)
             if let data = cnt.data(using: String.Encoding.utf8, allowLossyConversion: true) {

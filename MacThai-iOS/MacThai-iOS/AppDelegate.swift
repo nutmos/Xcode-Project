@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 //import Parse
 
 let BFTaskMultipleExceptionsException = "BFMultipleExceptionsException"
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.applicationIconBadgeNumber = 0
         Parse.setApplicationId("2CEmp541HWHErNQvSTun6TrQf1kft8eh6TlQrrPj", clientKey: "3eu7KLagxJieG3M1vi7lG8eF28Orx9zogjcvy0Wp")
-        if application.responds(to: "registerUserNotificationSettings:") {
+        if application.responds(to: #selector(UIApplication.registerUserNotificationSettings(_:))) {
             let userNotificationTypes: UIUserNotificationType = [.alert, .badge, .sound]
             //let userNotificationTypes: UIUserNotificationType = .Alert | .Badge | .Sound
             let settings = UIUserNotificationSettings(types: userNotificationTypes, categories: nil)
@@ -28,8 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             application.registerForRemoteNotifications()
         }
         else {
-            let types: UIRemoteNotificationType = [.badge, .alert, .sound]
-            application.registerForRemoteNotifications(matching: types)
+            //let types: UNAuthorizationOptions = [.badge, .alert, .sound]
+            let notiTypes: UIUserNotificationType = [.badge, .alert, .sound]
+            //let types: UIRemoteNotificationType = [.badge, .alert, .sound]
+            //application.registerForRemoteNotifications(matching: types)
+            
+            application.registerForRemoteNotifications()
         }
         // Override point for customization after application launch.
         return true
@@ -72,8 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        PFPush.handle(userInfo)
-        if application.applicationState == UIApplicationState.inactive {
+        PFPush.handlePush(userInfo)
+        if application.applicationState == .inactive {
             //PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(inBackground: userInfo, block: nil)
         }
